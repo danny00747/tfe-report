@@ -1,0 +1,51 @@
+---
+title: "Development Of Car Rental Management System"
+subtitle: "Rapport de stage"
+author:
+- Daniel Olivier
+lang: en
+papersize: a4
+fontsize: 12pt
+whitespace: small
+margin-top: 3cm
+margin-left: 1.75cm
+margin-right: 1.75cm
+margin-bottom: 3cm
+footer-left: "EPHEC"
+header-left: "Stage chez BStorm"
+subject: Rapport de mon stage chez BStorm
+keywords: [Stage, BStorm, Angular, NestJS, développement, EPHEC, 3TI]
+titlepage: true
+titlepage-rule-height: 6
+titlepage-rule-color: "ef4524"
+titlepage-text-color: "343434"
+titlepage-background: "imgs/back.jpg"
+table-use-row-colors: true
+colorlinks: true
+date: 07 mai 2021
+toc: true
+lof: true
+lot: true
+lol: false
+toc-won-page: true
+toc-title: Table des matières
+reference-section-title : "References"
+
+header-includes:
+  - |
+    ```{=latex}
+    \usepackage{polyglossia}
+    \usepackage{awesomebox}
+    \usepackage{tcolorbox }
+    \usepackage[tableposition = top]{caption}
+    \usepackage{booktabs}
+    ```
+pandoc-latex-environment:
+  noteblock: [note]
+  tipblock: [tip]
+  warningblock: [warning]
+  cautionblock: [caution]
+  importantblock: [important]
+  tcolorbox: [box]
+
+---
