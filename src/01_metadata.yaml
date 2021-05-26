@@ -12,23 +12,23 @@ margin-left: 1.75cm
 margin-right: 1.75cm
 margin-bottom: 3cm
 footer-left: "EPHEC"
-header-left: "Stage chez BStorm"
+header-left: "Car Rental Management System"
 subject: Rapport de mon stage chez BStorm
-keywords: [Stage, BStorm, Angular, NestJS, développement, EPHEC, 3TI]
+keywords: [Spring, Java, Angular, Car, Rental, EPHEC, 3TI]
 titlepage: true
 titlepage-rule-height: 6
 titlepage-rule-color: "ef4524"
 titlepage-text-color: "343434"
-titlepage-background: "imgs/back.jpg"
+titlepage-background: "imgs/back.pdf"
 table-use-row-colors: true
 colorlinks: true
-date: 07 mai 2021
+date: 07 may 2021
 toc: true
 lof: true
 lot: true
-lol: false
+lol: true
 toc-won-page: true
-toc-title: Table des matières
+toc-title: Table of contents
 reference-section-title : "References"
 
 header-includes:
