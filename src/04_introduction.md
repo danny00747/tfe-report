@@ -3,9 +3,13 @@ Chapter 1 : Introduction
 
 ## Overview
 
-"*If your business is not on the internet, then your business will be out of business*" 
+::: tip
 
-– Bill Gates, Founder of Microsoft (September 2011).
+"*If your business is not on the internet, then your business will be out of business*"
+
+\rightline{{\rm --- Bill Gates, Founder of Microsoft.}}
+
+:::
 
 ::: note
 

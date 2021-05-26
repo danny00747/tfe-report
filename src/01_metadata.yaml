@@ -39,6 +39,7 @@ header-includes:
     \usepackage{tcolorbox }
     \usepackage[tableposition = top]{caption}
     \usepackage{booktabs}
+    \usepackage{amssymb}
     ```
 pandoc-latex-environment:
   noteblock: [note]
