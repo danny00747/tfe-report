@@ -19,7 +19,7 @@ being evaluated.
 
 
 ```{=latex}
-\begin{awesomeblock}[black]{1.7pt}{\faWikipediaW}{black} 
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
 ```
 
 The **TOPSIS** is a multi-criteria decision analysis method developed by Hwang and

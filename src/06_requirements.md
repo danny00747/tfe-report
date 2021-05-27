@@ -55,7 +55,7 @@ Function requirements describes _What The Application Should Do_.
 
 :::
 
-A full list of function requirements can be found [here.](https://github.com/danny00747/vms/wiki/Function-Requirements "function requirements")
+A full list detailed of function requirements can be found [here.](https://github.com/danny00747/vms/wiki/Function-Requirements "function requirements")
 
 | Req. No. | Description                                                               |
 |----------|---------------------------------------------------------------------------|
@@ -77,41 +77,107 @@ Non-functional requirements describes _How The Application Should Behave_.
 
 :::
 
-A full list of non-functional requirements can be found [here.](https://github.com/danny00747/vms/wiki/Non-Function-Requirements "non-functional requirements")
+A full detailed list of non-functional requirements can be found [here.](https://github.com/danny00747/vms/wiki/Non-Function-Requirements "non-functional requirements")
 
 | Req. No. | Description                                                           | 
-|----------|---------------------------------------------------------------------- |
+|----------|-----------------------------------------------------------------------|
 | R-1      | The application' s interface should to be user-friendly & easy to use |
 | R-2      | The application should be 24/7 available to customers                 |
 | R-3      | Customer's data should be protected from attacks                      | 
 | R-4      | The application should maintain data integrity through backups        |     
 | R-5      | The website’s load time should not be more than 10 seconds            | 
 
+Table: Non-functional Requirements
 
 ### Data Dictionary
 
+In a Database Management System (**DBMS**), a data dictionary contains database metadata, in other words characteristics 
+of the stored data and relationships between entities.
 
-With width specified:
-\begin{center}
-\begin{tabular}{ | l | l | l | p{5cm} |}
-\hline
-Day & Min Temp & Max Temp & Summary \\ \hline
-Monday & 11C & 22C & A clear day with lots of sunshine.  
-However, the strong breeze will bring down the temperatures. \\ \hline
-Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-across most of Scotland and Northern Ireland,
-but rain reaching the far northwest. \\ \hline
-Wednesday & 10C & 21C & Rain will still linger for the morning.
-Conditions will improve by early afternoon and continue
-throughout the evening. \\
-\hline
-\end{tabular}
-\end{center}
+The full data dictionary can be found [here.](https://github.com/danny00747/vms/wiki/Non-Function-Requirements "non-functional requirements")
 
+
+| Attribute      | Description                       | Type    | Constraints       |
+|----------------|-----------------------------------|---------|-------------------|
+| name           | The client's name                 | VARCHAR | Required          |
+| bookingId      | An id of a reservation            | UUID    | Required & Unique |  
+| cancelledDate  | A reservation's cancelled date    | Date    | Not required      | 
+| brand          | The car's model brand             | VARCHAR | Required & Unique | 
+| costPerDay     | The cost of a rented car per day  | INTEGER | Required          | 
+
+Table: Data Dictionary
 
 ### Entity–relationship Model
 
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+In software engineering, an **Entity–relationship** model is commonly formed to represent things a business needs to remember 
+in order to perform business processes. Consequently, the ER model becomes an abstract data model, that defines a data or 
+information structure which can be implemented in a database, typically a relational database.
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
+\begin{figure}[H]
+\centering
+\caption{Entity–relationship Diagram}
+\includegraphics[scale=0.49]{imgs/tfe-er.png}
+\end{figure}
+
+
 ### Relational Data Model
 
+
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+The purpose of the **relational model** is to provide a declarative method for specifying data and queries: users directly state 
+what information the database contains and what information they want from it, and let the database management system software 
+take care of describing data structures for storing the data and retrieval procedures for answering queries.
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
+\begin{figure}[H]
+\centering
+\caption{Relational Diagram}
+\includegraphics[scale=0.49]{imgs/tfe-rel.png}
+\end{figure}
+
+### Business Rules
+
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+A **business rule** defines or constrains some aspect of business and always resolves to either true or false. 
+Business rules are intended to assert business structure or to control or influence the behavior of the business.
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
+A full detailed list of business rules can be found [here.](https://github.com/danny00747/vms/wiki/Non-Function-Requirements "non-functional requirements")
+
+| BR. No. | Description                                         | 
+|---------|-----------------------------------------------------|
+| BR-1    | Only registered customers can book cars             |
+| BR-2    | Every car in the system must have model             |
+| BR-3    | A client must have a driving licence to rent a car  | 
+| BR-4    | A customer can only book one car at once            |     
+| BR-5    | Every rent must be linked to its reservation        | 
+
+Table: Business Rules
 
 \pagebreak
