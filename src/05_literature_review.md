@@ -230,7 +230,11 @@ to drop off the car upon return date.  \newline
 
 **B.** **Europcar**
 
-**Europcar**[^3] Mobility Group is a French car rental company founded in 1949 in Paris.
+**Europcar**[^3] a global leader in car rental business. 
+
+This application is dedicated to making car hire online as easy as possible and providing online services worldwide.
+
+This application provides many services such as negotiated rate that are numeric-only discount codes for companies that have a partnership with Europcar.
 
 
 

@@ -49,9 +49,9 @@ not only him accept online reservations and manage his entire fleet but as well 
 potential customers reserve available cars online. This car rental system should allow
 him to run his business smoothly and effectively. \newline
 
-## Stakeholders
+## Stakeholder(s)
 
-Several	types of stakeholders can be noted when it comes to	our	software. 
+Several	types of stakeholders can be noted when it comes to any	software. 
 The	most obvious are those that requested for this software. In my case it's my Dutch born client that basically hired me to 
 develop this car rental management web based application for his upcoming business.  
 
