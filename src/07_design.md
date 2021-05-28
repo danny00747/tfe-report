@@ -42,30 +42,41 @@ Spring boot was used as the application API to be consumed by the Angular applic
 
 ### Why Java ?
 
-```{.ts caption="java demo"}
-interface Dog {
-    bark: () => void;
-}
+  - Java Ergonomics 
 
-/* The developer has to manually implement
-a heuristic check for interface adherence!
-When they update the interface, they have
-to update the type guards too! */
-function isDog(pet: object): pet is Dog {
-  return (pet as Dog).bark !== undefined;
-}
-const dog: any = {bark: () => console.log('woof')};
+The craftsmanship of JetBrains makes Java really easy to use. Most java features are autocompleted, jump to java 
+doc is really fast, method and class refactoring is done efficiently. However, I gravitated towards Java because 
+I wanted a good and efficient developer experience with third-party libraries. When consuming third-party 
+libraries in Java, you always know exactly what types are needed for a method but most importantly, an incorrect 
+usage of the latter will result into a compilation error. 
 
-if (isDog(dog)) {
-    // TS now knows that objects within this if statement are always type Dog
-    // This is because the type guard isDog narrowed down the type to Dog
-    dog.bark();
-}
-```
+  - Nominal Typing
 
+On of the reasons a dynamic typed language wasn't chosen is because I wanted my application to fail at build
+time rather than at runtime upon a change in a third-party method. It's completely a waste of time when you have
+to refer back to the implementation of a method to figure out which type(s) to pass it.
+
+The typed version of Javascript called TypeScript somehow solves this problem, but still lack the ability to validate 
+passed types at runtime without extra code. You have to implement yourself typing/interfaces for you to have some 
+type safety in your application.
 
 
 ## Frontend Architecture
 
+The Angular application was developed using the following architecture:
+
+\begin{figure}[H]
+\centering
+\caption{Angular Architecture}
+\includegraphics[scale=0.24]{imgs/angular-archi.jpeg}
+\end{figure}
+
+\rightline{{\rm --- From tomastrajan.medium.com}}
+
+
 ### Technology stack
- 
+
+- Language : TypeScript
+- Framework: Angular 10
+- Build Tool : NPM
+- CSS Library: PrimeNG
