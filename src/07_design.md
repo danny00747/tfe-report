@@ -14,7 +14,11 @@ The application was developed using the following architecture:
 \rightline{{\rm --- From frontbackend.com}}
 
 
-Spring boot was used as the application API to be consumed by the Angular application. 
+The system is made of three components : 
+
+   - The backend Spring Boot application as an API to be consumed by the Angular application. 
+   - The frontend Angular application as the client side of this whole system.
+   - The PostgreSQL database used by the API.
 
 
 ## Backend Architecture
@@ -36,7 +40,7 @@ Spring boot was used as the application API to be consumed by the Angular applic
 
     **Database :** 
     
-    - SGBD : PostgreSQL
+    - DBMS : PostgreSQL
     - ORM : Hibernate
     - Migrations : Flyway
 

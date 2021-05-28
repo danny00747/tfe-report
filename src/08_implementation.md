@@ -140,13 +140,122 @@ At compile time, the MapStruct annotation processor plugin will pick up the `Boo
 an implementation for it. The `BookingMapperImpl` class implements all `BookingMapper` interface methods which maps 
 our `Booking` fields to the `BookingDTO` fields and contrariwise.
 
-### JPA - Java Persistence API
-
 ### Mail Service
+
+To send mails to customers for instance a successful booking confirmation, **SendGrid API** was used as an 
+Email Delivery Service.
+
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+**SendGrid** (also known as Twilio SendGrid) is a Denver, Colorado-based customer communication platform for transactional 
+and marketing email. It provides a cloud-based service that assists businesses with email delivery. The service 
+manages various types of email including shipping notifications, friend requests, sign-up confirmations, and 
+email newsletters. 
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
+```{.java caption="MailService"}
+
+@Profile("prod")
+@Service
+public class MailService {
+
+    private final String sendGridAPI;
+
+    public MailService(SendGridConfiguration sendGridConfiguration) {
+        this.sendGridAPI = sendGridConfiguration.getApiKey();
+    }
+
+    public void sendEmailConfirmation(String emailTo) {
+        var from = new Email("he201718@students.ephec.be");
+        var subject = "Confirm Your Email !";
+        var to = new Email(emailTo);
+        var content = new Content("text/html", emailTemplate());
+        var mail = new Mail(from, subject, to, content);
+        var request = new Request();
+        try {
+            request.setMethod(Method.POST);
+            request.setEndpoint("mail/send");
+            request.setBody(mail.build());
+            SendGrid sg = new SendGrid(sendGridAPI);
+            Response response = sg.api(request); // 202 if ok
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+
+```
+
 
 ### Twilio SMS API
 
+To send SMS to customers to remind them for instance when to pick up their rented car or to confirm their phone number,
+**Twilio API** was used as an SMS Delivery Service.
+
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+**Twilio** is an American cloud communications platform as a service (CPaaS) company based in San Francisco, 
+California. It allows software developers to programmatically make and receive phone calls, send and receive text 
+messages, and perform other communication functions using its web service APIs.
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
 ### Error Handling 
+
+Handling exceptions is a crucial part when developing a robust application. Spring Boot offers more 
+than one way of doing it. Since it's version 3.2, there is the `@ControllerAdvice` annotation to unify exception 
+handling across the whole application.
+
+\begin{tcolorbox}[colback=green!5,colframe=green!35!black,
+title=Why is it called "Controller Advice" ?,coltitle=white,
+fonttitle=\bfseries]
+
+The term 'Advice' comes from Aspect-Oriented Programming (AOP) which allows us to inject cross-cutting 
+code (called "advice") around existing methods. A controller advice allows us to intercept and modify 
+the return values of controller methods, in our case to handle exceptions.  \newline
+
+\rightline{{\rm --- From reflectoring.io}}
+
+\end{tcolorbox}
+
+
+
+```{.java caption="ControllerAdvice"}
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+   /**
+     * A method to handle email duplication across the whole application.
+     */
+    @ExceptionHandler({EmailAlreadyUsedException.class})
+    public ResponseEntity<Map<String, String>> emailAlreadyUsedException(EmailAlreadyUsedException ex) {
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(Map.of("message", ex.getMessage()));
+    }
+}
+
+```
+
+## Database
+
+### Overview
+
+### Flyway Migrations
 
 [^4]: [Tomcat](http://tomcat.apache.org)
 [^5]: [Postman](https://www.postman.com/)
