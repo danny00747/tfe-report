@@ -255,7 +255,52 @@ public class GlobalExceptionHandler {
 
 ### Overview
 
-### Flyway Migrations
+This application uses PostgreSQL was its database. The latter was chosen first all because it's an open source
+database secondly it's a feature-rich database that supports things like Full-text Search and JSON for instance.
+
+### Database Migrations - Flyway
+
+Ideally its good to have well-thought-out schema of a database at the beginning of a project but with 
+evolving requirements changes to the initial schema tend to happen quite often. A database schema literally represents 
+the application so changes to the latter must be carefully executed to avoid losing the currently stored data. 
+To tackle this problem **Flyway** was used a database-migration tool.
+
+```{=latex}
+\begin{awesomeblock}[black]{0.4pt}{\faWikipediaW}{black} 
+```
+
+In software engineering, schema migration (also database migration, database change management) refers to the 
+management of incremental, reversible changes and version control to relational database schemas. A schema migration 
+is performed on a database whenever it is necessary to update or revert that database's schema to some newer or older 
+version.
+
+\rightline{{\rm --- Wikipedia}}
+
+```{=latex}
+\end{awesomeblock}
+```
+
+Flyway migrations can be written in SQL or Java but SQL base migrations were chosen for simplicity. 
+
+```{.sql caption="Booking Table"}
+
+CREATE TABLE booking
+(
+    id                uuid            DEFAULT        PRIMARY KEY,
+    cancellation_date TIMESTAMPTZ,
+    booking_state     d_booking_state DEFAULT 'OPEN' NOT NULL,
+    withdrawal_date   TIMESTAMPTZ                    NOT NULL,
+    return_date       TIMESTAMPTZ                    NOT NULL,
+    user_id           uuid                           NOT NULL UNIQUE,
+    car_id            uuid,
+    CHECK (return_date > withdrawal_date),
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (car_id) REFERENCES cars (id) 
+);
+
+```
 
 [^4]: [Tomcat](http://tomcat.apache.org)
 [^5]: [Postman](https://www.postman.com/)
+
+\pagebreak
