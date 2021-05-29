@@ -16,7 +16,7 @@ The application was developed using the following architecture:
 
 The system is made of three components : 
 
-   - The backend Spring Boot application as an API to be consumed by the Angular application. 
+   - The backend Spring Boot application as a REST API to be consumed by the Angular application. 
    - The frontend Angular application as the client side of this whole system.
    - The PostgreSQL database used by the API.
 
@@ -25,7 +25,7 @@ The system is made of three components :
 
 \begin{figure}[H]
 \centering
-\caption{Spring Boot Architecture}
+\caption{Backend REST API Architecture}
 \includegraphics[scale=0.6]{imgs/spring-archi.png}
 \end{figure}
 
@@ -71,7 +71,7 @@ The Angular application was developed using the following architecture:
 
 \begin{figure}[H]
 \centering
-\caption{Angular Architecture}
+\caption{Frontend Architecture}
 \includegraphics[scale=0.24]{imgs/angular-archi.jpeg}
 \end{figure}
 

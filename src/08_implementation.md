@@ -255,8 +255,9 @@ public class GlobalExceptionHandler {
 
 ### Overview
 
-This application uses PostgreSQL was its database. The latter was chosen first all because it's an open source
-database secondly it's a feature-rich database that supports things like Full-text Search and JSON for instance.
+This application uses **PostgreSQL** was its database. The latter was chosen firstly because it's an open source
+database secondly a relational database was a needed to handle all interrelations between entities and lastly 
+because it's a feature-rich database that supports things like Full-text Search and JSON for instance.
 
 ### Database Migrations - Flyway
 

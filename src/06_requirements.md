@@ -26,9 +26,9 @@ the stakeholders of the system required. For this particular application **Proto
 
 **Prototyping model** was chosen firstly because it allowed me to implement many prototypes which were presented to the 
 application stakeholder in order to get some feed-back based on how the final application should look and work from his point 
-of view. Secondly because I knew that stakeholder was going to be heavily involved during the application development which 
-by the way helped him not only get as soon as possible a glimpse of us how the application works and looks but as well as catch errors 
-as they came.
+of view. Secondly because I knew that stakeholder was going to be heavily involved in the creation of this application which 
+by the way helped him not only get as soon as possible a glimpse of how the application works and looks but as well as 
+point out unwanted features as they came.
 
 ### Approach to Prototyping Methodology
 

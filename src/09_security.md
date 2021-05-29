@@ -66,6 +66,15 @@ Step 4 shown in figure 9 might sometimes fail so in the effort to make the appli
 a custom authorization failure handler class was created to deal with users trying to access forbidden routes. 
 
 
+\begin{figure}[H]
+\centering
+\caption{Authorization Fail Message}
+\includegraphics[scale=0.39]{imgs/403-msg.jpeg}
+\end{figure}
+
+Figure 10 shows an authenticated user trying to access a route he/she doesn't have access to. Only a user with role of an `admin` 
+is allowed to read all users stored in the database. 
+
 ## Open Web Application Security Project - OWASP
 
 [^6]: [JWT](https://jwt.io/)
