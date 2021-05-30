@@ -47,7 +47,7 @@ facilitating code refactoring & design improvement and more importantly reduces 
 Integration testing plays a major role in the application development cycle by making sure the backend endpoints
 work as expected. To achieve the latter, **MockMvc**[^8] was used to test the web layer and perform requests against
 a mocked servlet environment. There were no real HTTP request going around during the integration tests since 
-the latter run in a mocked environment provided by Spring.
+the latter are executed in a mocked environment provided by Spring.
 
 ## Architecture Testing - ArchUnit[^9]
 
@@ -67,14 +67,14 @@ main focus is to automatically test architecture and coding rules, using any pla
 
 A common problem that occurs quite often in a Software Development Life Cycle is that code implementation can often 
 diverge from the initial design and architecture. This is where ArchUnit comes into play to test that a code 
-implementation is consistent with the initially defined architecture.
+implementation is consistent with the initially defined design.
 
 One of the main reason of software architecture, when it comes to codebase, is maintainability, and to keep an
 application maintainable, testable, and extendable, an effort to make sure it is modular, interdependencies 
 are as small as possible and there no loose coupling between components needs to be made.
 
 Furthermore, in an evolving application, implementation rules evolve over time. The use of ArchUnit tests 
-forces us developers to purposely accept deviations from predefined rules instead of accidentally encountering 
+forces us developers to purposely accept deviations from predefined rules instead of haphazardly encountering 
 them later in a test feature or actually never. ArchUnit issues warnings about deviations.
 
 ArchUnit allowed me to test the following : 

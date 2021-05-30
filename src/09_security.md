@@ -163,7 +163,9 @@ public void configure(HttpSecurity http) throws Exception {
 title=What's a referrer ?,coltitle=white, fonttitle=\bfseries]
 
 The Referrer-Policy HTTP header controls how much referrer information (sent via the Referer header) should
-be included with requests. For example, if you click a link on \textbf{\emph{https://rent-vehicle.herokuapp.com/index.html}}
+be included with requests. 
+
+For example, if you click a link on \textbf{\emph{https://rent-vehicle.herokuapp.com/index.html}}
 that takes you to \textbf{\emph{https://www.ephec.be}}, Ephec’s servers will see 
 Referer: \textbf{\emph{https://rent-vehicle.herokuapp.com}}. This can have privacy implications.
 
@@ -180,8 +182,8 @@ with having visited that particular medical webpage.
    - **How was this fixed ?**
 
 A Referrer-Policy header with a directive of `strict-origin-when-cross-origin` was added on the backend server to 
-control what information is sent through the Referer header. This referer header lets us know where the inbound visitor
-came from, and is really handy, but there are cases where we may want to control or restrict the amount of information 
+control what information is sent through the Referer header. This referer header indicates where the inbound visitor
+came from, but there are cases where a developer may want to control or restrict the amount of information 
 present in this header like the path or even whether the header is sent at all.
 
 Here is an example :
@@ -204,9 +206,12 @@ Table: Referrer Policy
             .referrerPolicy(
                 ReferrerPolicyHeaderWriter
                     .ReferrerPolicy.STRICT_ORIGIN_WHEN_CROSS_ORIGIN)
-}
+ }
 
 ```
+
+\pagebreak
+
 
 ### Strict Transport Security
 
@@ -251,6 +256,9 @@ that their content is not embedded into other sites.
 When browsers load iframes, they’ll check the value of the X-Frame-Options header and abort loading if it’s not allowed.
 The header has three options, but the one that was chosen is `X-Frame-Options: DENY`
 
+\pagebreak
+
+
 ```{.java caption="X-Frame-Options"}
 
  @Override
@@ -274,7 +282,7 @@ to the admin just in case the website went down.
 \includegraphics[scale=0.52]{imgs/monitor.png}
 \end{figure}
 
-Figure 11 shows that the application has been up & running for more 50 days and never went down ! 
+Figure 11 shows this application has been up & running for more 50 days and never went down ! 
 
 [^6]: [JWT](https://jwt.io/)
 [^7]: [uptimerobot](https://uptimerobot.com/)
