@@ -55,7 +55,7 @@ Function requirements describes _What The Application Should Do_.
 
 :::
 
-A full list detailed of function requirements can be found [here.](https://github.com/danny00747/vms/wiki/Function-Requirements "function requirements")
+A full list detailed of function requirements can be found [here](https://github.com/danny00747/vms/wiki/Function-Requirements "function requirements").
 
 | Req. No. | Description                                                               |
 |----------|---------------------------------------------------------------------------|

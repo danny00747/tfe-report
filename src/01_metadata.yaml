@@ -40,6 +40,7 @@ header-includes:
     \usepackage[tableposition = top]{caption}
     \usepackage{booktabs}
     \usepackage{amssymb}
+    \usepackage{multicol}
     ```
 pandoc-latex-environment:
   noteblock: [note]

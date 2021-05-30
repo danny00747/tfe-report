@@ -197,8 +197,8 @@ Table: Referrer Policy
 
 ```{.java caption="Referrer Policy"}
 
-@Override
-public void configure(HttpSecurity http) throws Exception {
+ @Override
+ public void configure(HttpSecurity http) throws Exception {
     http
         .headers()
             .referrerPolicy(
@@ -253,8 +253,8 @@ The header has three options, but the one that was chosen is `X-Frame-Options: D
 
 ```{.java caption="X-Frame-Options"}
 
-@Override
-public void configure(HttpSecurity http) throws Exception {
+ @Override
+ public void configure(HttpSecurity http) throws Exception {
     http
        .headers()
            .frameOptions()
