@@ -22,7 +22,7 @@ titlepage-text-color: "343434"
 titlepage-background: "imgs/back.pdf"
 table-use-row-colors: true
 colorlinks: true
-date: 07 may 2021
+date: 29 may 2021
 toc: true
 lof: true
 lot: true
@@ -40,7 +40,6 @@ header-includes:
     \usepackage[tableposition = top]{caption}
     \usepackage{booktabs}
     \usepackage{amssymb}
-    \usepackage{multicol}
     ```
 pandoc-latex-environment:
   noteblock: [note]

@@ -44,6 +44,8 @@ facilitating code refactoring & design improvement and more importantly reduces 
 
 ```
 
+\pagebreak
+
 Integration testing plays a major role in the application development cycle by making sure the backend endpoints
 work as expected. To achieve the latter, **MockMvc**[^8] was used to test the web layer and perform requests against
 a mocked servlet environment. There were no real HTTP request going around during the integration tests since 
@@ -83,7 +85,6 @@ ArchUnit allowed me to test the following :
 - Class dependency 
 - Naming conventions
 - Layered packages constraints
-- Coding guidelines (such as the naming of classes, members and static variables). 
 
 
 ```{.java caption="Layer Dependencies"}
@@ -110,7 +111,7 @@ ArchUnit allowed me to test the following :
 E2E tests live demo [here](https://github.com/danny00747/vms/wiki/Test-Reports "e2e report").
 
 An end-to-end tests are all about testing an application from the end customer’s perspective and making sure business 
-requirements are met. To achieve this feat a Node library called Puppeteer was used. 
+requirements are met. To achieve this feat, a Node library called Puppeteer was used. 
 
 ### Puppeteer
 

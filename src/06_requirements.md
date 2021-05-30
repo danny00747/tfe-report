@@ -3,10 +3,10 @@ Chapter 3 : Software Requirement Specifications - SRS
 
 ## Overview
 
-This chapter contains the analysis and design of car rental web based application system, the type of
-the methodology, function and non-functional requirements of this application and 
-software tools that were used during the development phase. In addition, this chapter contains UML diagrams, 
-the database design, application architecture to better understand how the application is designed.
+This chapter contains the analysis and design of this application, the chosen type of
+the methodology, function & non-functional requirements and software tools that were used during the development phase. 
+In addition, this chapter contains UML diagrams, the database design, the application architecture to better understand 
+how the application is designed.
 
 ## Proposed Methodology
 
@@ -25,27 +25,26 @@ the stakeholders of the system required. For this particular application **Proto
 \rightline{{\rm --- From codebots.com}}
 
 **Prototyping model** was chosen firstly because it allowed me to implement many prototypes which were presented to the 
-application stakeholder in order to get some feed-back based on how the final application should look and work from his point 
+stakeholder in order to get some feed-back based on how the final application should look and work from his point 
 of view. Secondly because I knew that stakeholder was going to be heavily involved in the creation of this application which 
 by the way helped him not only get as soon as possible a glimpse of how the application works and looks but as well as 
 point out unwanted features as they came.
 
 ### Approach to Prototyping Methodology
 
-Prototyping methodology has many software development life cycle (**SDLC**) phases, at the first stage,
-what I did was gather all non-functional and functional application requirements are gathered from the stakeholder 
-by talking him, then moved to the second stage by designing of the application which was presented to him as a preview 
-of the application system in order to identify flaws of the latter. The third stage was about refining the 
-prototype according to feedback I was able to gather from him. 
+Prototyping methodology has many software development life cycle (**SDLC**) phases, at the first stage, 
+all non-functional and functional application requirements are gathered from the stakeholder through multiple conversations, 
+then the second stage was about presenting the designed prototype in order to identify its flaws from his perspective. 
+The third stage was about refining the prototype according to the gathered feedback. 
 
 ## Requirements Analysis
 
 Requirements are the list of functions and features that an application must possess. After several conversations 
-with the stakeholder, I was able to gather all requirements that were needed to be implemented meet his needs.
+with the stakeholder, Over time all requirements that were needed to be implemented meet his needs were gathered.
 
 My analysis went through many phases such as making a difference between functional and non-functional requirements, 
-setting up a data dictionary for database metadata, entity–relationship model to better understand how entities in 
-the system are related and finally a relational data model that represents the database's tables. 
+setting up a data dictionary for the database metadata, entity–relationship model to better understand the interrelations 
+between the system entities finally a relational data model that literally represents the database's tables. 
 
 ### Function Requirements
 
@@ -77,13 +76,13 @@ Non-functional requirements describes _How The Application Should Behave_.
 
 A full detailed list of non-functional requirements can be found [here](https://github.com/danny00747/vms/wiki/Non-Function-Requirements "non-functional requirements").
 
-| Req. No. | Description                                                           | 
-|----------|-----------------------------------------------------------------------|
-| R-1      | The application' s interface should to be user-friendly & easy to use |
-| R-2      | The application should be 24/7 available to customers                 |
-| R-3      | Customer's data should be protected from attacks                      | 
-| R-4      | The application should maintain data integrity through backups        |     
-| R-5      | The website’s load time should not be more than 10 seconds            | 
+| Req. No. | Description                                                       | 
+|----------|-------------------------------------------------------------------|
+| R-1      | The application's interface should be user-friendly & easy to use |
+| R-2      | The application should be 24/7 available to customers             |
+| R-3      | Customer's data should be protected from attacks                  | 
+| R-4      | The application should maintain data integrity through backups    |     
+| R-5      | The website’s load time should not be more than 10 seconds        | 
 
 Table: Non-functional Requirements
 

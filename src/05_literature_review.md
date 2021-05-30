@@ -4,10 +4,10 @@ Chapter 2 : Literature Review
 ## Overview
 
 This chapter contains a literature review for the application that was developed. The review describes the existing 
-systems that are similar to the car rental management system. References are made to source from the internet.
+systems that are similar to the car rental management system. 
 
-Furthermore, literature review helps to provide an overview on how the **TOPSIS**[^1] technique was used as a method 
-in multiple criteria decision-making to prioritize the best car possible for users of the applications.
+Furthermore, literature review helps to provide an overview on how the **TOPSIS**[^1] technique was implemented as a method 
+in multiple criteria decision-making to prioritize the best car possible to customers.
 
 ## Multi-Criteria Decision Making Method
 
@@ -24,7 +24,8 @@ being evaluated.
 
 The **TOPSIS** is a multi-criteria decision analysis method developed by Hwang and
 Yoon (1981) with further developments by Yoon (1987) and Hwang, Lai and Liu (1993)
-(Surendra, 2016).
+(Surendra, 2016). It's based on the concept that the chosen alternative should have the shortest geometric 
+distance from the positive ideal solution, and the longest geometric distance from the negative ideal solution.
 
 \rightline{{\rm --- Wikipedia}}
 
@@ -36,16 +37,16 @@ After some research about how to provide the best ideal car possible to client, 
 for this application because it will make the latter more efficient.
 
 
-The TOPSIS algorithm is to contrive the best ideal solution (note as s+), and the
-worst ideal solution (note as s-) to the problem of multiple criteria while the s+ is hypnotically
-optimal solution from the criteria, but the s- is the worst solution from the criteria. The rule is to rank and compare 
-each alternative of the result with s+ and s-.  \newline
+The TOPSIS algorithm is to contrive the best ideal solution (note as `s+`), and the
+worst ideal solution (note as `s-`) to the problem of multiple criteria while the `s+` is knows as the 
+optimal solution from the criteria, but the `s-` is the worst solution from the criteria. 
+The rule is to rank and compare each alternative of the result with `s+` and `s-`.  \newline
 
 The TOPSIS algorithm was carried out as follows:
 
 #### Step 1 : Construct the decision matrix and determine the weight of criteria. \newline \newline
 
-Let's say we have three cars available for rent with three criteria as Table 1
+Let's say we have three cars available for rent with four criteria as shown in Table 1
 
 | Attribute/Criteria  | Price  | Numbers of Passengers | Number of Bags | Class    |
 |---------------------|--------|-----------------------|----------------|----------|
@@ -56,8 +57,8 @@ Let's say we have three cars available for rent with three criteria as Table 1
 
 Table:  Table of Criteria.
 
-Table 1 shows that each car have their criteria. If we convert the class linguistic terms using the 5 point scale,
-we get the following table : 
+Table 1 shows that each car have their criteria. If class linguistic terms are converted using the 5 point scale,
+the following table appears: 
 
 | Attribute/Criteria  | Price  | Numbers of Passengers | Number of Bags | Class    |
 |---------------------|--------|-----------------------|----------------|----------|
@@ -96,8 +97,8 @@ Let's start by calculating the denominator for the price column :
 
 Table:  Table of Criteria with the performance value
 
-Next, the data for each criterion will be normalised. Divide the data with their own
-criteria performance values as shown in Table 3 to get result.
+Next, the data for each criterion was normalised. Each criterion was divided with their own
+criteria performance values as shown in Table 3 :
 
 
 | Attribute/Criteria  | Price                        | Numbers of Passengers | Number of Bags | Class                   |
@@ -119,7 +120,7 @@ $v_{ij}$ = $w_j$ $n_{ij}$ for i = 1, ..., m; j = 1, ..., n where $w_j$ is the we
 This means that each criterion should have its own weight so that all of them will sum up to 1.
 
 Let weight price be = 0.4, number of passengers = 0.2, number of bags = 0.1 and class = 0.3. 
-The normalised value will be multiplied by corresponding normalised weight. as shown in Table 5.
+The normalised value will be multiplied by corresponding normalised weight. as shown in Table 5 : 
 
 | Attribute/Criteria  | Price                        | Numbers of Passengers | Number of Bags    | Class              |
 |---------------------|------------------------------|-----------------------|-------------------|--------------------|
@@ -142,13 +143,13 @@ Table:  Table of Criteria with the weighted normalised values
 
 Table:  Table of Criteria with positive ideal and negative ideal solutions.
 
-From table 6 $V^+$ represents the best ideal solution while $V^-$ is the worst ideal solution. $V^+$
-is taken from the highest value while $V^-$ taken from the lowest value. For the price column a lower value is desired hence V+ 
-indicates the lowest value same goes for the class column as these two are linked. 
+From table 6, $V^+$ represents the best ideal solution while $V^-$ is the worst ideal solution. $V^+$
+is taken from the highest value while $V^-$ taken from the lowest value. For the price column a lower 
+value is desired hence $V^+$ indicates the lowest value same goes for the class column as these two are linked. 
 
 #### Step 5 :  Find the Euclidean distance between the best ideal solution(V+), and the worst(V-). 
 
-- _The Euclidean formula from the ideal best value_
+- _The Euclidean formula from the ideal best value :_
 
 \begin{equation}
 \ \scalebox{1.5}{$\displaystyle s_{i}^+ = { \sqrt{\sum_{i=1}^{m} (v_{ij} -  v_{j}^+)^2 }}$} \
@@ -161,7 +162,7 @@ indicates the lowest value same goes for the class column as these two are linke
 \end{split}
 \end{equation}
 
-- _The Euclidean formula from the ideal worst value_
+- _The Euclidean formula from the ideal worst value :_
 
 \begin{equation}
 \ \scalebox{1.5}{$\displaystyle s_{i}^- = { \sqrt{\sum_{i=1}^{m} (v_{ij} -  v_{j}^-)^2 }}$} \

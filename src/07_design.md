@@ -3,7 +3,7 @@ Chapter 4 : Software Design
 
 ## System Architecture
 
-The application was developed using the following architecture:
+The application was developed using the following architecture :
 
 \begin{figure}[H]
 \centering
@@ -56,7 +56,7 @@ usage of the latter will result into a compilation error.
 
   - Nominal Typing
 
-On of the reasons a dynamic typed language wasn't chosen is because I wanted my application to fail at build
+On of the reasons a dynamic typed language wasn't chosen is because I wanted my application to fail at compile
 time rather than at runtime upon a change in a third-party method. It's completely a waste of time when you have
 to refer back to the implementation of a method to figure out which type(s) to pass it.
 

@@ -4,17 +4,17 @@ Chapter 5 : Implementation
 ## API
 
 The API of this application is simply a Spring Boot Java application running on an embedded Apache Tomcat Server[^4].
-To test different endpoints of this api, **Postman**[^5] was used a testing API tool. 
+To test different endpoints of this API, **Postman**[^5] was used a testing API tool. 
 
    - **API Documentation**
 
-An undocumented API is not that useful, there are very many api documentation tools out there but since the api was 
-developed in java, a built-in tool in IntelliJ IDEA was used to generate the _**javadoc**_ for the api. 
+There are very many api documentation tools out there but since the api was 
+developed in java, a built-in tool in IntelliJ IDEA was used to generate the _**javadoc**_ for the API. 
 The latter can be found [here](https://rent-vehicle-api.netlify.app "javadoc").
 
 ### MapStruct - Mapping Library
 
-Since an API designed to be consumed by other applications, data integrity and security become crucial when designing 
+Since an API is designed to be consumed by other applications, data integrity and security become crucial when designing 
 an API. Most of the time, an external API or the end-user doesn't need to access the entirety of the data from a 
 database model, but only some specific fields. In such scenarios Data Transfer Objects (**DTOs**) come in handy. 
 
@@ -69,7 +69,7 @@ public interface EntityMapper<D, E> {
 }
 ```
 
-This interface is extends by all interface mappers in the application. Listing 2, shows how I was able 
+This interface is extends by all interface mappers in the application. Listing 4, shows how I was able 
 to map a dto to it's model class. 
 
 Let's say we have to map a `Booking` class to it's `BookingDTO` class. 
@@ -114,7 +114,6 @@ public @Data class BookingDTO {
     private CarDTO carDTO;
 
 }
-
 ```
 
 Now, to make a mapper between these two classes, a `BookingMapper` interface was created. By annotating it with `@Mapper`, 
@@ -133,16 +132,15 @@ interface BookingMapper extends EntityMapper<BookingDTO, Booking> {
     void partialUpdate(@MappingTarget User user, UserInfoDTO userInfoDTO);
 
 }
-
 ```
 
 At compile time, the MapStruct annotation processor plugin will pick up the `BookingMapper` interface and generate 
-an implementation for it. The `BookingMapperImpl` class implements all `BookingMapper` interface methods which maps 
-our `Booking` fields to the `BookingDTO` fields and contrariwise.
+an implementation for it. The `BookingMapperImpl` class implements all `BookingMapper` interface methods which one of 
+them (`toDto`) maps the `Booking` class fields to the `BookingDTO` class fields.
 
 ### Mail Service
 
-To send mails to customers for instance a successful booking confirmation, **SendGrid API** was used as an 
+To send mails to customers upon a successful booking confirmation, **SendGrid API** was used as an 
 Email Delivery Service.
 
 ```{=latex}
@@ -166,33 +164,33 @@ email newsletters.
 @Service
 public class MailService {
 
-    private final String sendGridAPI;
+    private final String sendGridAPIKey;
 
     public MailService(SendGridConfiguration sendGridConfiguration) {
-        this.sendGridAPI = sendGridConfiguration.getApiKey();
+        this.sendGridAPIKey = sendGridConfiguration.getApiKey();
     }
 
     public void sendEmailConfirmation(String emailTo) {
+    
         var from = new Email("he201718@students.ephec.be");
         var subject = "Confirm Your Email !";
         var to = new Email(emailTo);
         var content = new Content("text/html", emailTemplate());
         var mail = new Mail(from, subject, to, content);
         var request = new Request();
+        
         try {
             request.setMethod(Method.POST);
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
-            SendGrid sg = new SendGrid(sendGridAPI);
+            SendGrid sg = new SendGrid(sendGridAPIKey);
             Response response = sg.api(request); // 202 if ok
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 }
-
 ```
-
 
 ### Twilio SMS API
 

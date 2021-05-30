@@ -4,31 +4,20 @@ Conclusion
 ## Daniel Olivier
 
 ```{=latex}
-\begin{awesomeblock}[white][\abShortLine][\textbf{Mon avis sur le stage }]{5pt}{\faComments}{black}
+\begin{awesomeblock}[white][\abShortLine][\textbf{Final Word }]{5pt}{\faComments}{black}
 ```
 
-Ces 15 semaines de stage, viennent conclure ma troisième année d’études à l'EPHEC.
-Elles vont me permettre de valider mon Bachelier en Technologique de l'Informatique et m’ont permis de vivre une expérience
-forte, instructive et très bénéfique tant sur le plan théorique que sur le plan pratique ; suite à l’acquisition et
-la maîtrise de nouvelles technologies et des nouveaux aspects dans le domaine de développement d'applications web. \newline
+The development of this application taught me a lot. I had the opportunity to improve myself in the Java 
+programming language ecosystem by using multiple libraries to develop some features. Overall im completely 
+gratified with the final product. The application is fully operational and bug-free, customers can book their cars
+anytime - any day - anywhere ! \newline \newline
 
+"\textbf{Truth can only be found in one place: the code.}"
 
-Par ailleurs, j’ai pu approfondir mes connaissances sur « mon Moi », en
-prenant conscience de ma capacité à transmettre efficacement un savoir quelconque, ou
-en découvrant mon goût pour le travail en autonomie. De plus, les missions que j’ai
-réalisées avec succès vont me permettre d’enrichir aussi bien d’un degré quantitatif que
-qualitatif mon portfolio. \newline
-
-L'EPHEC, en mettant à disposition ce stage m'a permis de comprendre qu'il y a une différence
-fondamentale entre les connaissances théoriques et les réalités du terrain. Et
-qu'un bon encadrement est nécessaire comme ce fut dans mon cas pour mieux
-saisir la portée et la responsabilité du travail de développeur. Je sors grandi de cette expérience
-d'apprentissage avec beaucoup de connaissances, d'espoir et prêt à relever de
-nouveaux défis. \newline
-
-En définitive, ce stage a été une expérience déterminante dont je pourrais certainement profiter au
-niveau professionnel et de manière encore plus évidente au niveau personnel.
+\rightline{{\rm --- Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship}}
 
 ```{=latex}
 \end{awesomeblock}
 ```
+
+\pagebreak

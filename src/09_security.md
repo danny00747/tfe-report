@@ -27,7 +27,7 @@ requirements.
 \rightline{{\rm --- From Spring Security in Action Book}}
 \end{figure}
 
-Figure 7 demonstrates steps that executed to authenticate a user in this application. Obviously there is a lot of things 
+Figure 7 demonstrates steps that executed to authenticate a user on the backend level. Obviously there is a lot of things 
 going on under the hood during the authenticating process, but the details of the latter are out of scope 
 of this report.
 
@@ -50,10 +50,10 @@ using their roles, privileges and permissions.
 To limit what a user can do, the latter has to be authenticated through a set of credentials verification process. 
 Once successfully authenticated, the user's role is retrieved from the HTTP Authorization header.
 
-Within this application, roles are created for various user types (e.g., admin or user and anonymous). 
+Within this application, roles are created for various user types (e.g., admin, user and anonymous). 
 The permission to perform certain transactions or access a particular route, a specific role is needed. 
 For instance, a user with a role of an `admin` is granted the permission to create, update, read, and 
-delete any profile, whereas a user with a role of a `user` is given access to read & update his own profile.
+delete any profile, whereas a user with a role of a `user` is given access to read & update their own profile.
 
 \begin{figure}[H]
 \centering
@@ -72,7 +72,7 @@ a custom authorization failure handler class was created to deal with users tryi
 \includegraphics[scale=0.39]{imgs/403-msg.jpeg}
 \end{figure}
 
-Figure 10 shows an authenticated user trying to access a route he/she doesn't have access to. Only a user with role of an `admin` 
+Figure 10 shows an authenticated user with no proper authorization trying to read all users. Only a user with role of an `admin` 
 is allowed to read all users stored in the database. 
 
 ## Open Web Application Security Project - OWASP
@@ -92,19 +92,19 @@ methodologies, documentation, tools, and technologies in the field of web applic
 ### Sensitive Data Exposure
 
 As the name implies, this security threat occurs when the web application does not adequately protect 
-sensitive information like session tokens, emails, passwords, banking information, location, health data, or any other 
-similar crucial data whose leak can be critical for the user.
+sensitive information like session tokens, emails, passwords, credit card information, location, health data,
+or any other similar crucial data whose leak can be critical for the customer.
 
    - **Precaution Taken Against Sensitive Data Exposure**
 
 First, I needed to determine what data the application collects that could be considered sensitive. After a thorough 
-study on that matter, information like email addresses, phone numbers, personal address, and  
-finally passwords should all be considered sensitive information. One way to defend against attackers 
-gaining access to sensitive data is through thorough review of the application code and environment.
+study on that matter, information like email addresses, phone numbers, personal address, and passwords should all be 
+considered sensitive information. One way to defend against attackers gaining access to sensitive data is through 
+thorough review of the application code and environment.
 
-The following are some precautions to mitigate this attack :
+The following are some precautions that were taken to mitigate this attack :
 
-   1. **Passwords are using strong adaptive and salted hashing functions**.
+   1. **Passwords are hashed using strong adaptive and salted hashing functions**.
 
 
 ```{.java caption="Password Encoder"}
@@ -117,16 +117,12 @@ The following are some precautions to mitigate this attack :
 ```
 
 
-To achieve that we used a Spring Security's PasswordEncoder whose implementation uses the BCrypt strong hashing function. 
-Bcrypt allows us to choose the value of saltRounds which gives developers control over the cost of processing the data.
-The higher this number is, the longer it takes for the machine to calculate the hash associated with the password. 
+To achieve that we used a Spring Security's PasswordEncoder whose implementation uses BCrypt strong hashing functions. 
+Bcrypt allows developers to choose the value of saltRounds. The higher this number is, the longer it takes a 
+machine to compute the hash associated with the password.
 
-It is important when choosing 
-this value, to select a number high enough that someone who tries to find the password for a user by brute 
-force, requires so much time to generate all the possible hash of passwords that does not compensate him. 
-
-Having that, it needed to be small enough to avoid slowing down the application during the registration or 
-authentification process. By default, the saltRounds value is 10, and that's good enough.
+Having that, it has to be small enough to avoid slowing down the application during the registration or 
+authentification process. By default, the saltRounds value is 10, and that's the one that was chosen. It's good enough.
 
    2. **Website only available via HTTPS**.
 
@@ -155,7 +151,7 @@ public void configure(HttpSecurity http) throws Exception {
 ```
 
 > For the moment the site is deployed on Heroku so out of the box the site is already in HTTPS, but this header 
-> added was added in case future developers choose another platform other than Heroku.
+> added was added in case future developers choose another hosting platform other than Heroku.
 
 ### Referrer Policy
 
@@ -210,8 +206,6 @@ Table: Referrer Policy
 
 ```
 
-\pagebreak
-
 
 ### Strict Transport Security
 
@@ -247,7 +241,7 @@ title=What is X-Frame-Options ?,coltitle=white, fonttitle=\bfseries]
 
 The X-Frame-Options HTTP response header can be used to indicate whether a browser should be allowed to render a 
 page in a <frame>, <iframe>, <embed> or <object>. Sites can use this to avoid click-jacking attacks, by ensuring 
-that their content is not embedded into other sites.
+that their content is not embedded into other sites. \newline
 
 \rightline{{\rm --- From developer.mozilla.org}}
 
@@ -255,8 +249,6 @@ that their content is not embedded into other sites.
 
 When browsers load iframes, they’ll check the value of the X-Frame-Options header and abort loading if it’s not allowed.
 The header has three options, but the one that was chosen is `X-Frame-Options: DENY`
-
-\pagebreak
 
 
 ```{.java caption="X-Frame-Options"}
@@ -271,9 +263,11 @@ The header has three options, but the one that was chosen is `X-Frame-Options: D
 
 ```
 
+\pagebreak
+
 ### Insufficient Logging And Monitoring
 
-To detect easily why and when the website was/is down. An **uptimerobot[^7]** monitor was set up to send a message 
+To detect easily why & when the website was/is down. An **uptimerobot[^7]** monitor was set up to send a message 
 to the admin just in case the website went down. 
 
 \begin{figure}[H]
