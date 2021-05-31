@@ -1,4 +1,4 @@
-Chapter 6 : Security
+Chapter VI : Security
 =====================
 
 ## Spring Security
@@ -47,8 +47,8 @@ is sent to the user as shown in figure 8.
 **Role-based Access Control**, is a mechanism that restricts an application access to users 
 using their roles, privileges and permissions.
 
-To limit what a user can do, the latter has to be authenticated through a set of credentials verification process. 
-Once successfully authenticated, the user's role is retrieved from the HTTP Authorization header.
+To limit what a customer can do, the latter has to be authenticated through a set of credentials verification process. 
+Once successfully authenticated, the customer's role is retrieved from the HTTP Authorization header.
 
 Within this application, roles are created for various user types (e.g., admin, user and anonymous). 
 The permission to perform certain transactions or access a particular route, a specific role is needed. 
@@ -72,8 +72,8 @@ a custom authorization failure handler class was created to deal with users tryi
 \includegraphics[scale=0.39]{imgs/403-msg.jpeg}
 \end{figure}
 
-Figure 10 shows an authenticated user with no proper authorization trying to read all users. Only a user with role of an `admin` 
-is allowed to read all users stored in the database. 
+Figure 10 shows an authenticated user with no proper authorization trying to read all customers. Only a user with 
+role of an `admin` is allowed to read all customers stored in the database. 
 
 ## Open Web Application Security Project - OWASP
 

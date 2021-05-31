@@ -1,4 +1,4 @@
-Chapter 5 : Implementation
+Chapter V : Implementation
 ===========================
  
 ## API
@@ -16,7 +16,7 @@ The latter can be found [here](https://rent-vehicle-api.netlify.app "javadoc").
 
 Since an API is designed to be consumed by other applications, data integrity and security become crucial when designing 
 an API. Most of the time, an external API or the end-user doesn't need to access the entirety of the data from a 
-database model, but only some specific fields. In such scenarios Data Transfer Objects (**DTOs**) come in handy. 
+database model, but only some specific fields. In a such scenario Data Transfer Objects (**DTOs**) come in handy. 
 
 
 ```{=latex}
@@ -116,8 +116,8 @@ public @Data class BookingDTO {
 }
 ```
 
-Now, to make a mapper between these two classes, a `BookingMapper` interface was created. By annotating it with `@Mapper`, 
-MapStruct concludes that this is a mapper between our two classes:
+Now, to make a mapper between these two classes, a `BookingMapper` interface was created. 
+By annotating it with `@Mapper`, MapStruct concludes that this is a mapper between the two classes :
 
 ```{.java caption="BookingMapper"}
 

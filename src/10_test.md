@@ -1,12 +1,12 @@
-Chapter 7 : Application Testing
+Chapter VII : Application Testing
 ================================
 
 A full Tests report can be found [here](https://rent-vehicle-test-report.netlify.app/index.html "tests report").
 
 ## Unit Test
 
-Unit testing an applications has many benefits such as ensuring every component of the latter works as it should, 
-facilitating code refactoring & design improvement and more importantly reduces bug fixing cost. 
+Unit testing an applications has many benefits such as ensuring every component of the latter works as expected, 
+facilitates code refactoring & design improvement and more importantly reduces bug fixing cost. 
 
 **JUnit** was used as a unit testing tool in this application. 
 
@@ -123,7 +123,8 @@ default, but can be configured to run in headful mode which helps while debuggin
 It's important to note that puppeteer \underline{is not} a testing tool. It doesn't come with built-in testing assertions, 
 it's just a tool for controlling the browser. But if it's used along with real testing tools such as Mocha & Chai,
 we get a fascinating framework that can test the application as if it was being used by a customer. 
-In other words the combination of Puppeteer, Mocha & Chai helps us test our app from the user's perspective. \newline \newline
+In other words the combination of Mocha & Chai and Puppeteer helps test an application from the costumer's 
+perspective. \newline \newline
 
 
 ```{.js caption="E2E Test Example"}

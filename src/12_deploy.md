@@ -1,4 +1,4 @@
-Chapter 9 : DevOps
+Chapter IX : DevOps
 ===================
 
 ## Web Hosting Service - Heroku
@@ -47,5 +47,6 @@ Here are the steps that were followed to deploy the packaged jar on Heroku :
 
 [^11]: [Heroku CLI Deploy Plugin](https://github.com/heroku/heroku-cli-deploy)
 [^12]: [Procfile](https://devcenter.heroku.com/articles/procfile)
+
 
 \pagebreak

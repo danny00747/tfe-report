@@ -1,4 +1,4 @@
-Chapter 1 : Introduction
+Chapter I : Introduction
 ========================
 
 ## Overview
@@ -14,13 +14,14 @@ Chapter 1 : Introduction
 ::: note
 
 The car rental management system presented in this report is a web-based application for the stakeholder's company 
-that's accessible to the public through the web and furthermore keep and maintain records about reservations. \newline
+that's accessible to the public through the web and furthermore it was developed to keep and maintain records
+about reservations. \newline
 
 The main feature of this application is to keep tracks of vehicles, customers and booking.
 The latter provides useful information to the administrator such as making reports of booked vehicles and acts
-as a vehicle management system by monitoring the use and price of these vehicles. From the customer point of view, 
+as a vehicle management system by monitoring the use and price of these vehicles. From the customers point of view, 
 this application helps them find that car to move from one place to another for business 
-or school purposes, tour, and sightseeing occasions. Thus, making this application extremely useful. 
+or school purposes, tour, and sightseeing occasions. Thus, making it extremely useful. 
 
 :::
 
@@ -42,13 +43,12 @@ business, developing a car rental software becomes a must.
 \pagebreak
 
 I got in touch with him through a mutual acquaintance to implement a well-designed car rental system to help
-not only him accept online reservations and manage his entire fleet but as well as his
-potential customers reserve available cars on the to-be developed website. This car rental application should allow
-him to run his business smoothly and effectively. 
+not only manage and maintain his entire fleet online but as well as his potential customers book available cars 
+on the to-be developed website. This car rental application should allow him to run his business smoothly and effectively. 
 
 ## Stakeholder(s)
 
-Several	types of stakeholders can be noted when it comes to any	software. 
+Several	types of stakeholders can be identified when it comes to any software. 
 The	most obvious are those that requested a system to be developed. In my case it's my Dutch born client that basically 
 hired me (_figuratively speaking_) to develop this car rental management web based application for his upcoming business.  
 

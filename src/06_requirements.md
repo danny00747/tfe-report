@@ -1,4 +1,4 @@
-Chapter 3 : Software Requirement Specifications - SRS
+Chapter III : Software Requirement Specifications - SRS
 ======================================================
 
 ## Overview
@@ -6,7 +6,7 @@ Chapter 3 : Software Requirement Specifications - SRS
 This chapter contains the analysis and design of this application, the chosen type of
 the methodology, function & non-functional requirements and software tools that were used during the development phase. 
 In addition, this chapter contains UML diagrams, the database design, the application architecture to better understand 
-how the application is designed.
+how the latter is designed.
 
 ## Proposed Methodology
 
@@ -35,7 +35,7 @@ point out unwanted features as they came.
 Prototyping methodology has many software development life cycle (**SDLC**) phases, at the first stage, 
 all non-functional and functional application requirements are gathered from the stakeholder through multiple conversations, 
 then the second stage was about presenting the designed prototype in order to identify its flaws from his perspective. 
-The third stage was about refining the prototype according to the gathered feedback. 
+Refining the prototype according to the gathered feedback was done in the third stage. 
 
 ## Requirements Analysis
 
@@ -98,7 +98,7 @@ The full data dictionary can be found [here](https://github.com/danny00747/vms/w
 |----------------|-----------------------------------|---------|-------------------|
 | name           | The client's name                 | VARCHAR | Required          |
 | bookingId      | An id of a reservation            | UUID    | Required & Unique |  
-| cancelledDate  | A reservation's cancelled date    | Date    | Not required      | 
+| cancelledDate  | A reservation's cancelled date    | DATE    | Not required      | 
 | brand          | The car's model brand             | VARCHAR | Required & Unique | 
 | costPerDay     | The cost of a rented car per day  | INTEGER | Required          | 
 

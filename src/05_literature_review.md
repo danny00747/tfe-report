@@ -1,5 +1,5 @@
-Chapter 2 : Literature Review
-==============================
+Chapter II : Literature Review
+===============================
 
 ## Overview
 
@@ -11,7 +11,7 @@ in multiple criteria decision-making to prioritize the best car possible to cust
 
 ## Multi-Criteria Decision Making Method
 
-As the name implies, Multi-Criteria Decision-Making also known as MCDM is about methods for making decisions 
+As the name implies, Multi-Criteria Decision-Making also known as **MCDM** is about methods for making decisions 
 when multiple criteria need to be considered together, in order to rank or choose/prioritize between the alternatives 
 being evaluated.
 
@@ -38,7 +38,7 @@ for this application because it will make the latter more efficient.
 
 
 The TOPSIS algorithm is to contrive the best ideal solution (note as `s+`), and the
-worst ideal solution (note as `s-`) to the problem of multiple criteria while the `s+` is knows as the 
+worst ideal solution (note as `s-`) to the problem of multiple criteria while the `s+` is known as the 
 optimal solution from the criteria, but the `s-` is the worst solution from the criteria. 
 The rule is to rank and compare each alternative of the result with `s+` and `s-`.  \newline
 
